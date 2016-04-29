@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8"/>
+    <title>Quentin Watt - #24 - referencing elements</title>
+	<style>
+		#cat1,
+		#cat2{
+			cursor:pointer;
+		}
+	</style>
+	<script>
+	
+		var imageTracker = 'f';
+		
+		function change(){
+			var image = document.getElementById('cat1');
+			if(imageTracker == 'f'){
+				image.src = 'cat2.jpg';
+				imageTracker = 't';
+			}
+			else{
+				image.src = 'cat1.jpg'
+				imageTracker = 'f';
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<img src="cat1.jpg" alt="image of cat 1" id="cat1" onClick="change();" />
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+    <title>Quentin Watt - #12 - Variable scope</title>
+    <script>
+		var champion = "fizz"; // global
+		
+		function printChampion(){
+			document.write(champion + " inside function<br/>")
+		}
+		
+		printChampion();
+		document.write(champion + ' outside function<br/>');
+	</script>
+</head>
+<body>
+</body>
+</html>

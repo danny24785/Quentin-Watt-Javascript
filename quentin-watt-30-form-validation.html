@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8"/>
+    <title>Quentin Watt - #30 - form validation</title>
+	<script>
+
+		function check_info(){
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+			
+			if (username == "" || password == ""){
+				alert('Please fill in all fields');
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<form action="form_submission.html" method="post" onSubmit="return check_info();">
+    	<label>Username: </label><input type="text" name="username" id="username" /><br />
+        <label>Password: </label><input type="password" name="password" id="password" /><br />
+        <input type="submit" value="login">
+    </form>
+</body>
+</html>

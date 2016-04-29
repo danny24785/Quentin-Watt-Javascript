@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8"/>
+    <title>Quentin Watt - #28 - form values</title>
+	<script>
+	
+		function write_name(){
+			var welcome_parra = document.getElementById('welcome');
+			var name = document.getElementById('name');
+			
+			welcome_parra.innerHTML = 'welcome ' + name.value;
+		}
+		
+	</script>
+</head>
+<body>
+	<p id="welcome"></p>
+    <form>
+    	<label for="name">What is your name? </label><input type="text" id="name" /><br />
+    	<input type="button" value="Done" onClick="write_name();" />
+    </form>
+</body>
+</html>

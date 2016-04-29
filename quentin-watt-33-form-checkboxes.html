@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8"/>
+    <title>Quentin Watt - #33 - checkboxes</title>
+	<script>
+
+		function is_checked(){
+			var sports = document.getElementById('sports').checked;
+			var electronics = document.getElementById('electronics').checked;
+			var tools = document.getElementById('tools').checked;
+			
+			if(sports == false && electronics == false && tools == false){
+				alert('Please select at least one category');
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<form action="form_submission.html" method="post" onSubmit="return is_checked();">
+		<p>Please select the categories you are interested in</p>
+        <label for="sports">sports</label><input type="checkbox" name="sports" value="sports" id="sports" /><br />
+        <label for="electronics">electronics</label><input type="checkbox" name="electronics" value="electronics" id="electronics" /><br />
+        <label for="tools">tools</label><input type="checkbox" name="tools" value="tools" id="tools" /><br />
+        
+        <input type="submit" value="login">
+    </form>
+</body>
+</html>

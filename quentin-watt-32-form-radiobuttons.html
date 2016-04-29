@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8"/>
+    <title>Quentin Watt - #32 - radio buttons</title>
+	<script>
+
+		function is_checked(){
+			var Yes_checked = document.getElementById('autorenew_yes').checked;
+			var No_checked = document.getElementById('autorenew_no').checked;
+			
+			if(Yes_checked == false && No_checked == false){
+				alert('Please select an option');
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<form action="form_submission.html" method="post" onSubmit="return is_checked();">
+    	<p>Do yo want to autonenew your membership?</p>
+        <label>Yes</label><input type="radio" name="autorenew" value="yes" id="autorenew_yes" /><br />
+        <label>No</label><input type="radio" name="autorenew" value="no" id="autorenew_no" /><br />
+        <input type="submit" value="login">
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8"/>
+    <title>Quentin Watt - #24 - referencing elements</title>
+	<style>
+		#para{
+			cursor:pointer;
+		}
+	</style>
+	<script>
+	
+		function change(){
+			var para = document.getElementById('para');
+			para.innerHTML = 'this is a text';
+		}
+		
+	</script>
+</head>
+<body>
+	<p id="para" onclick="change();"> Click me </p>
+</body>
+</html>
